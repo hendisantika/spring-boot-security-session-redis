@@ -29,4 +29,39 @@ public class CustomUserDetails implements UserDetails {
         this.authorities = authorities;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return authorities;
+    }
+
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return active;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return active;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return active;
+    }
 }
